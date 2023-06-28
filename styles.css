@@ -1,0 +1,21 @@
+body {
+    background-color: white;
+}
+
+#border {
+    border: 1px black solid;
+    max-width: 50%;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#calculate {
+    : center;
+}
