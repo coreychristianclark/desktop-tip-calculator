@@ -1,11 +1,13 @@
 body {
+    height: 100vh;
     background-color: white;
     font-family: sans-serif;
 }
 
 #topBorder {
     border: 1px black solid;
-    max-width: 45%;
+    max-width: 43%;
+    max-height: 80rem;
 }
 
 h2 {
@@ -35,7 +37,7 @@ p {
 }
 
 #finalTotal {
-    font-size: 24px;
+    font-size: 30px;
 }
 
 #subtext {
@@ -45,6 +47,12 @@ p {
 
 #bottomBorder {
 border: 1px solid black;
+margin-top: -2rem;
+padding-bottom: 1em;
+border-radius: 5%;
+width: 80%;
+height: 12.5rem;
+padding-left: 10%;
 }
 
 #quickReference {
@@ -53,6 +61,3 @@ border: 1px solid black;
     margin-bottom: -0.5em;
 }
 
-input {
-
-}
