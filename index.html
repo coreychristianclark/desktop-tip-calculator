@@ -14,13 +14,13 @@
 <h2>Tip Calculator:</h2>
 
 
-<p>Bill Amount: <input type="number" placeholder="Amount due"></p>
+<p>Bill Total: $ <input type="number" placeholder="Amount due"></p>
 
 <p>Tip %:  <input type="number" placeholder="Desired tip percentage"></p>
 
-<p>Divide By:  <input type="number" placeholder="How many people?">
+<p>Divide By:  <input type="number" placeholder="Set default to 1">
 <br>
-<i>splitting the bill?</i></p>
+<span id="subtext">splitting the bill?</span></p>
 
 
 <div id="buttons">
@@ -34,23 +34,23 @@
     
 <div id="bottomBorder">
 
-<p>Bill Amount:
+<p>Bill Total:
     <br>
     Tip Total:
+<br>
+Tip Each:
 <br>
 Split {js}: $2,340 + "ea"
 </p>
 <br>
-<p> Quick Reference:
-    <br>
-    <br>
+<h4 id="quickReference"> Quick Reference: </h4>
+<p>
     15%:
     <br>
     20%:
     <br>
     25%:
 </p>
-
 
 
 
