@@ -1,12 +1,13 @@
 body {
     height: 100vh;
-    background-color: white;
+    background-color: gray;
     font-family: sans-serif;
 }
 
 #topBorder {
     border: 1px black solid;
-    max-width: 43%;
+    background-color: lightgrey;
+    max-width: 25%;
     max-height: 80rem;
 }
 
@@ -17,7 +18,7 @@ h2 {
 
 h3 {
     text-align: center;
-    margin-bottom: -1em;
+    margin-bottom: -1.5em;
 }
 
 p {
@@ -46,13 +47,13 @@ p {
 }
 
 #bottomBorder {
-border: 1px solid black;
+background-color: antiquewhite;
 margin-top: -2rem;
-padding-bottom: 1em;
 border-radius: 5%;
 width: 80%;
-height: 12.5rem;
-padding-left: 10%;
+justify-items: center;
+margin-left: 10%;
+margin-top: 1rem;
 }
 
 #quickReference {
