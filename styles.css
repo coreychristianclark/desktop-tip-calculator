@@ -71,3 +71,14 @@ padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
+#billInput {
+    text-align: center;
+}
+
+#tipPercentageInput {
+    text-align: center;
+}
+
+#divideByInput {
+    text-align: center;
+}

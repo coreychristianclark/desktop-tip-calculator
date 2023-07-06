@@ -17,7 +17,19 @@ form.addEventListener("submit", (e) => {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
-  grandTotal.innerText = "$" + formattedTotal;
+    grandTotal.innerText = "$" + formattedTotal;
+    
+    const billTotalText = document.querySelector('#billTotalText')
+    billTotalText.innerText = "$" + billTotal
+
+
+
+
+
+
+
 });
 
 // Must enter a number.console.error
+
+//function clear()
