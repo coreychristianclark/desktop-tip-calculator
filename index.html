@@ -10,77 +10,52 @@
 </head>
 
 <body>
-    <div id="topBorder">
+
+<div id="topBorder">
 <h2>Tip Calculator:</h2>
 
 
-<p>Bill Total: $ <input type="number" placeholder="Amount due"></p>
+<p>Bill: $ <input id="billInput" type="number" placeholder="Amount due"></p>
 
-<p>Tip %:  <input type="number" placeholder="Desired tip percentage"></p>
+<p>Tip %:  <input id="tipPercentageInput" type="number" placeholder="Desired tip percentage"></p>
 
-<p>Divide By:  <input type="number" placeholder="Set default to 1">
+<p>Divide By:  <input id="divideByInput" type="number" placeholder="Set to 1 or more">
 <br>
 <span id="subtext">splitting the bill?</span>
 </p>
 
 
 <div id="buttons">
-<button id="calculate">Calculate</button>
+<form><button>Calculate</button></form>
 <button id="clear">Clear</button>
 </div>
 
 <div id="totalWindow">
 <h3>Grand Total:</h3>
-<p id="finalTotal">$2,222</p>
+<p id="grandTotal">$0</p>
     
-<div id="bottomBorder">
+<div id="bottomBorderContainer">
 
-<p>Bill Total:
-    <br>
-    Tip Total:
+<div id="billTotal">Bill Total:</div>
+<div id="tipTotal">Tip Total:</div>
+<div id="tipEach">Tip Each:</div>
+<div id="totalEach">Total Each:</div>
 <br>
-Tip Each:
+
+<h4> Quick Reference: </h4>
 <br>
-Split {js}: $2,340 + "ea"
-</p>
-<br>
-<h4 id="quickReference"> Quick Reference: </h4>
-<p>
-    15%:
-    <br>
-    20%:
-    <br>
-    25%:
-</p>
+
+<div id="fifteen">15%:</div>
+<div id ="twenty">20%:</div>
+<div id="twentyFive">25%:</div>
 
 
-
-</div>
 
 
 
 
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 </body>
 </html>
