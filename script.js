@@ -8,14 +8,16 @@ form.addEventListener("submit", (e) => {
   const divideByInput = document.querySelector("#divideByInput");
   const grandTotal = document.querySelector("#grandTotal");
 
-  let billTotal = parseFloat(billInput.value);
-  let tipPercentage = parseFloat(tipPercentageInput.value);
-  let divideBy = parseFloat(divideByInput.value);
-  
-    let calculation = (billTotal * tipPercentage) + billTotal / divideBy
-    let grandTotalAmount = grandTotal.innerText = "$" + calculation
-    
-    
+  const billTotal = parseFloat(billInput.value);
+  const tipPercentage = parseFloat(tipPercentageInput.value) / 100;
+  const divideBy = parseFloat(divideByInput.value);
+
+  const calculation = billTotal * tipPercentage + billTotal / divideBy;
+  const formattedTotal = calculation.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+  grandTotal.innerText = "$" + formattedTotal;
 });
 
 // Must enter a number.console.error
