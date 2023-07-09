@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   const tipPercentage = parseFloat(tipPercentageInput.value) / 100;
   const divideBy = parseFloat(divideByInput.value);
 
-  const calculation = (billTotal * tipPercentage + billTotal) / divideBy;
+  const calculation = billTotal * tipPercentage + billTotal;
   const formattedTotal = calculation.toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -23,10 +23,23 @@ form.addEventListener("submit", (e) => {
     billTotalText.innerText = "$" + billTotal;
     
     const tipTotalText = document.querySelector('#tipTotalText')
-    tipTotalText.innerText = "$" + billTotal * tipPercentage
+    tipTotalText.innerText = "$" + (billTotal * tipPercentage)
 
     const tipEachText = document.querySelector('#tipEachText')
-    tipEachText.innerText = '$' + tipPercentage * 100
+    tipEachText.innerText = '$' + (billTotal * tipPercentage) / divideBy
+
+    const totalEachText = document.querySelector('#totalEachText')
+    totalEachText.innerText = '$' + (calculation / divideBy)
+
+    const fifteen = document.querySelector('#fifteen')
+    fifteen.innerText = '15%: $' + billTotal * 0.15
+
+    const twenty = document.querySelector('#twenty')
+    twenty.innerText = '20%: $' + billTotal * 0.20
+
+    const twentyFive = document.querySelector('#twentyFive')
+    twentyFive.innerText = '25%: $' + billTotal * 0.25
+
 });
 
 function formatNumber(input) {
