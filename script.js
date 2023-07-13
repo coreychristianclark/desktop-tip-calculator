@@ -5,7 +5,7 @@ form.addEventListener("submit", (e) => {
 
   function formatNumber(value, minimumFractionDigits, maximumFractionDigits) {
     const stringValue = String(value);
-    const numericValue = stringValue.replace(/[^\d.]/g, "").slice(0, 7);
+    const numericValue = stringValue.replace(/[^\d.]/g, "")
     const formattedValue = Number(numericValue).toLocaleString(undefined, {
       minimumFractionDigits: minimumFractionDigits,
       maximumFractionDigits: maximumFractionDigits,
@@ -14,7 +14,7 @@ form.addEventListener("submit", (e) => {
     }
     
     function limiter(value) {
-        
+
     }
 
 
