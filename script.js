@@ -22,6 +22,11 @@ form.addEventListener("submit", (e) => {
     }
   }
 
+  function removeError(value) {
+    value.addEventListener("click", () => {
+      value.classList.remove("error");
+    });
+  }
 
   const billInput = document.querySelector("#billInput");
   const tipPercentageInput = document.querySelector("#tipPercentageInput");
@@ -63,8 +68,16 @@ form.addEventListener("submit", (e) => {
   twentyFive.innerText = "25%: $" + formatNumber(twentyFiveMath, 2, 2);
 
   validateInput(billInput, "You must enter a valid amount.");
+  removeError(billInput);
+
+  validateInput(tipPercentageInput, "You must enter a valid number.")
+  removeError(tipPercentageInput)
+
+  validateInput(divideByInput, "You must enter 1 or more.")
+  removeError(divideByInput)
+
+
 
 });
-
 
 //function clear()
