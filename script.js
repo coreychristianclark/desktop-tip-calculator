@@ -5,18 +5,22 @@ form.addEventListener("submit", (e) => {
 
   function formatNumber(value, minimumFractionDigits, maximumFractionDigits) {
     const stringValue = String(value);
-    const numericValue = stringValue.replace(/[^\d.]/g, "")
+    const numericValue = stringValue.replace(/[^\d.]/g, "");
     const formattedValue = Number(numericValue).toLocaleString(undefined, {
       minimumFractionDigits: minimumFractionDigits,
       maximumFractionDigits: maximumFractionDigits,
     });
     return formattedValue;
-    }
-    
-    function limiter(value) {
+  }
 
+  function validateInput(inputElement, errorMessage) {
+    if (inputElement.value === "" || Number.isNaN(Number(inputElement.value))) {
+      console.error(errorMessage);
+      inputElement.classList.add("error");
+    } else {
+      inputElement.classList.remove("error");
     }
-
+  }
 
 
   const billInput = document.querySelector("#billInput");
@@ -57,8 +61,10 @@ form.addEventListener("submit", (e) => {
   const twentyFive = document.querySelector("#twentyFive");
   const twentyFiveMath = billTotal * 0.25;
   twentyFive.innerText = "25%: $" + formatNumber(twentyFiveMath, 2, 2);
+
+  validateInput(billInput, "You must enter a valid amount.");
+
 });
 
-// Must enter a number.console.error
 
 //function clear()
