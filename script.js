@@ -70,14 +70,31 @@ form.addEventListener("submit", (e) => {
   validateInput(billInput, "You must enter a valid amount.");
   removeError(billInput);
 
-  validateInput(tipPercentageInput, "You must enter a valid number.")
-  removeError(tipPercentageInput)
+  validateInput(tipPercentageInput, "You must enter a valid number.");
+  removeError(tipPercentageInput);
 
-  validateInput(divideByInput, "You must enter 1 or more.")
-  removeError(divideByInput)
-
+  validateInput(divideByInput, "You must enter 1 or more.");
+  removeError(divideByInput);
 
 
 });
 
-//function clear()
+
+  function clear() {
+    const clear = document.querySelector("#clear");
+    clear.addEventListener("click", () => {
+      billInput.value = "";
+      tipPercentageInput.value = "";
+      divideByInput.value = "";
+      grandTotalText.innerText = "$0"
+      billTotalText.innerText = "$0"
+      tipTotalText.innerText = "$0"
+      tipEachText.innerText = "$0"
+      totalEachText.innerText = "$0"
+      fifteen.innerText = "$0"
+      twenty.innerText = "$0";
+      twentyFive.innerText = "$0";
+    });
+}
+  
+clear()
