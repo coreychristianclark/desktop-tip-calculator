@@ -41,6 +41,7 @@ p {
 
 #buttons {
     text-align: center;
+    padding-top: 0.7em;
 }
 
 #calculate {
@@ -49,16 +50,11 @@ p {
 
 #clear {
     text-align: center;
-    margin: 3px;
+    margin: 6px;
 }
 
 #grandTotalText {
     font-size: 30px;
-}
-
-#subtext {
-    font-style: italic;
-    padding-left: 5em;
 }
 
 #bottomBorderContainer {

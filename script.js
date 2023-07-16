@@ -75,8 +75,6 @@ form.addEventListener("submit", (e) => {
 
   validateInput(divideByInput, "You must enter 1 or more.");
   removeError(divideByInput);
-
-
 });
 
 
@@ -94,7 +92,9 @@ form.addEventListener("submit", (e) => {
       fifteen.innerText = "$0"
       twenty.innerText = "$0";
       twentyFive.innerText = "$0";
+      billInput.classList.remove('error')
+      tipPercentageInput.classList.remove("error");
+      divideByInput.classList.remove("error");
     });
 }
-  
-clear()
+  clear()
