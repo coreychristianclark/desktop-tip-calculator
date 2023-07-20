@@ -1,8 +1,6 @@
 const form = document.querySelector("form");
 const errorMessage = document.querySelector("#error-message");
 
-
-
 function formatNumber(value, minimumFractionDigits, maximumFractionDigits) {
   const stringValue = String(value);
   const numericValue = stringValue.replace(/[^\d.]/g, "");
@@ -45,14 +43,10 @@ const fifteen = document.querySelector("#fifteen");
 const twenty = document.querySelector("#twenty");
 const twentyFive = document.querySelector("#twentyFive");
 
-
-
-
 function validateForm() {
   const billTotal = parseFloat(billInput.value);
   const tipPercentage = parseFloat(tipPercentageInput.value) / 100;
   const divideBy = parseFloat(divideByInput.value);
-
 
   const isBillValid = validateInput(
     billInput,
@@ -68,22 +62,21 @@ function validateForm() {
   );
 
   if (!isBillValid || !isTipPercentageValid || !isDivideByValid) {
-    errorMessage.innerText = "Please fill in all fields correctly.";
+    errorMessage.innerText = "*Please fill in all fields correctly";
     errorMessage.style.display = "block";
     return;
   }
 
-      if (isBillValid && isTipPercentageValid && isDivideByValid) {
-        validateInput(billInput, "You must enter a valid amount.");
-        removeError(billInput);
+  if (isBillValid && isTipPercentageValid && isDivideByValid) {
+    validateInput(billInput, "You must enter a valid amount.");
+    removeError(billInput);
 
-        validateInput(tipPercentageInput, "You must enter a valid number.");
-        removeError(tipPercentageInput);
+    validateInput(tipPercentageInput, "You must enter a valid number.");
+    removeError(tipPercentageInput);
 
-        validateInput(divideByInput, "You must enter 1 or more.");
-        removeError(divideByInput);
-      }
-
+    validateInput(divideByInput, "You must enter 1 or more.");
+    removeError(divideByInput);
+  }
 
   const grandTotalMath = billTotal + tipPercentage * billTotal;
   grandTotalText.innerText = "$" + formatNumber(grandTotalMath, 2, 2);
@@ -111,14 +104,10 @@ function validateForm() {
   errorMessage.style.display = "none";
 }
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    validateForm();
-  });
-
-
-
-
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  validateForm();
+});
 
 function clear() {
   const clear = document.querySelector("#clear");
@@ -137,7 +126,8 @@ function clear() {
     billInput.classList.remove("error");
     tipPercentageInput.classList.remove("error");
     divideByInput.classList.remove("error");
-    errorMessage.innerText = ""
+    errorMessage.innerText = "";
   });
 }
-clear()
+clear();
+

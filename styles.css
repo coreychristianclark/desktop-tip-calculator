@@ -102,4 +102,6 @@ padding-top: 0.5rem;
     color: red;
     display: none;
     font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
 }
