@@ -126,7 +126,7 @@ function clear() {
     billInput.classList.remove("error");
     tipPercentageInput.classList.remove("error");
     divideByInput.classList.remove("error");
-    errorMessage.innerText = "";
+    errorMessage.style.display = "none";
   });
 }
 clear();
