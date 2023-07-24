@@ -24,7 +24,7 @@ function validateInput(inputElement, errorMessageText) {
   return true;
 }
 
-function removeError(value) {
+function removeErrorOnFocus(value) {
   value.addEventListener("focus", () => {
     value.classList.remove("error");
     errorMessage.style.display = "none";
@@ -34,6 +34,7 @@ function removeError(value) {
 const billInput = document.querySelector("#billInput");
 const tipPercentageInput = document.querySelector("#tipPercentageInput");
 const divideByInput = document.querySelector("#divideByInput");
+const inputs = [billInput, tipPercentageInput, divideByInput];
 const grandTotalText = document.querySelector("#grandTotalText");
 const billTotalText = document.querySelector("#billTotalText");
 const tipTotalText = document.querySelector("#tipTotalText");
@@ -68,14 +69,14 @@ function validateForm() {
   }
 
   if (isBillValid && isTipPercentageValid && isDivideByValid) {
-    validateInput(billInput, "You must enter a valid amount.");
-    removeError(billInput);
+    validateInput(inputs[0], "You must enter a valid amount.");
+    removeErrorOnFocus(inputs[0]);
 
-    validateInput(tipPercentageInput, "You must enter a valid number.");
-    removeError(tipPercentageInput);
+    validateInput(inputs[1], "You must enter a valid number.");
+    removeErrorOnFocus(inputs[1]);
 
-    validateInput(divideByInput, "You must enter 1 or more.");
-    removeError(divideByInput);
+    validateInput(inputs[2], "You must enter 1 or more.");
+    removeErrorOnFocus(inputs[2]);
   }
 
   const grandTotalMath = billTotal + tipPercentage * billTotal;
@@ -108,6 +109,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateForm();
 });
+
 
 function clear() {
   const clear = document.querySelector("#clear");

@@ -111,3 +111,10 @@ padding-top: 0.5rem;
     border: 2px solid red;
     background-color: white;
 }
+
+#buttonContainer{
+    display: flex;
+    justify-content: center;
+    
+    padding-bottom: 1rem;
+}
