@@ -1,6 +1,6 @@
 # tip-calculator
-Tip Calculator
-Third Project
+Tip Calculator, 
+Third Project, 
 7/25/2023
 
 For this project, I wanted to build something practical – a useful tool people could benefit from very frequently. I’ve had more than enough encounters of having to do these calculations by hand, so I created a tool to do it all for me.
