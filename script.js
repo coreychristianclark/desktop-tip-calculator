@@ -133,3 +133,19 @@ function clear() {
 }
 clear();
 
+const calculatorContainer = document.querySelector("#calculatorContainer");
+const moveLeftButton = document.querySelector("#moveLeftButton");
+const moveCenterButton = document.querySelector("#moveCenterButton");
+const moveRightButton = document.querySelector("#moveRightButton");
+
+moveLeftButton.addEventListener("click", () => {
+  calculatorContainer.style.justifyContent = "flex-start";
+});
+
+moveCenterButton.addEventListener("click", () => {
+  calculatorContainer.style.justifyContent = "center";
+});
+
+moveRightButton.addEventListener("click", () => {
+  calculatorContainer.style.justifyContent = "flex-end";
+});
