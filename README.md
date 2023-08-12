@@ -12,5 +12,5 @@ At the bottom of the calculator, you will see ‘L’, ‘C’, and ‘R’ butt
 
 
 
-Thank you for reading, and if you come across any bugs/error, please contact me at:
+Thank you for reading, and if you come across any bugs/errors, please contact me at:
 coreychristianclark@gmail.com
