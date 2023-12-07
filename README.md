@@ -1,4 +1,5 @@
-# tip-calculator
+# Tip Calculator Desktop
+
 Tip Calculator, 
 Third Project, 
 7/25/2023
