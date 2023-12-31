@@ -13,5 +13,6 @@ At the bottom of the calculator, you will see ‘L’, ‘C’, and ‘R’ butt
 
 
 
-Thank you for reading, and if you come across any bugs/errors, please contact me at:
-coreychristianclark@gmail.com
+For any questions, suggestions, or to report errors, please [contact me!](mailto:coreychristianclark@gmail.com)
+
+![Tip Calculator Preview](https://github.com/coreychristianclark/tip-calculator-desktop/assets/127354494/6c0b43bc-df57-43a6-92e7-bfb05f3eac31)
