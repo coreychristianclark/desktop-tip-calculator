@@ -1,4 +1,4 @@
-# Tip Calculator Desktop
+# Desktop Tip Calculator
 
 Tip Calculator, 
 Third Project, 
